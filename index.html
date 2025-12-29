@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Saagar Chandrabalan| Portfolio</title>
+		
+		<style>
+		
+		
+		.profile-pic{
+		  width:312px;
+		  height:468px;
+		  
+	
+		  border:4px solid #426381;
+		}
+		
+		body {
+		margin: 0;
+		font-family: Blake;
+		background: #f2f2f2;
+		color: #333;}
+
+		header {
+		  background: #426381;
+		  color: white;
+		  text-align: center;
+		  font-size:33px;
+		  padding: 1px;}
+
+		nav {
+		  background: #abe2f1;
+		  text-align: center;
+		  padding: 10px;
+		  height:75px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: flex-end;
+		  
+		}
+
+		nav a {
+		  color: rgb(22, 21, 21);
+		  margin: 15px;
+		  text-decoration:none;
+		  font-weight: bold;
+          font-weight: bolder;
+          text-transform: uppercase;
+          padding: 10px 50px;
+          
+         
+        }
+
+		nav a:hover {
+		  color: #f1c40f;}
+
+		section {
+		  background: white;
+		  margin: 20px;
+		  padding: 40px;
+		  border-radius: 10px;}
+
+
+		h2 {
+		  color: #235aae;
+          font-size:xx-large;
+          font-family:Georgia, 'Times New Roman', Times, serif
+          
+        }
+
+		.bar {
+		  background: #ddd;
+		  height: 20px;
+		  border-radius: 10px;}
+
+		.progress {
+		  height: 100%;
+		  border-radius: 10px;}
+
+		.html { width: 95%; background: #ff5733; }
+		.css { width: 80%; background: #3498db; }
+		.js { width: 70%; background: #f1c40f; }
+
+
+		.project {
+		  background: hsl(54, 63%, 72%);
+		  padding: 15px;
+		  border-radius: 8px;
+		  margin-top: 10px;
+		}
+
+	
+		input, textarea {
+		  width: 100%;
+		  padding: 10px;
+		  margin-bottom: 10px;
+		}
+
+		button {
+		  background: #005ce6;
+		  color: white;
+		  border: none;
+		  padding: 10px 20px;
+		  cursor: pointer;
+		}
+
+		button:hover {
+		  background: #003c99;
+		}
+
+		footer {
+		  background: #222;
+		  color: white;
+		  text-align: center;
+		  padding: 15px;
+		}
+
+		#about {
+          background-color: #e8f2e6; 
+          text-align: center;
+        }
+
+		@media (max-width: 768px) {
+		  nav a {
+			display: block;
+			margin: 10px;
+		  }
+		}
+		</style>
+	</head>
+
+		<body>
+
+		<header>
+		  <h1>SAGAR CHANDRABALAN</h1>
+		  <P>Diploma in Computer Science with Artificial Intelligence</P>
+		</header>
+		
+		
+
+
+		<nav>
+		  <a href="#about">About</a>
+		  <a href="#skills">Skills</a>
+		  <a href="#projects">Projects</a>
+		  <a href="#contact">Contact</a>
+		</nav>
+		
+		<center>
+		  <img src="D:\DIP IN CSAI\SEM 02\WEB DEVELOP\FINAL ASSIGNMENTS\INDIVIDUAL\MTIAMGE.jpeg" class="profile-pic">
+		</center>
+
+		<section id="about">
+		  <h2><center>About Me</h2>
+		  <p><CENTER>
+			Hi! My name is Saagar Chandrabalan, and I’m currently studying for a 
+			Diploma in Computer Science with Artificial Intelligence.
+			I enjoy learning new things and creating simple, clean websites
+			using HTML, CSS, and JavaScript. I like experimenting with designs, 
+			improving my skills step by step, and building projects that help me learn better.
+			I’m always excited to grow, explore new technologies,
+			and improve myself in the field of web development. 
+		  </p>
+
+		  <h3><CENTER>Education</h3>
+		  <p>Diploma in Computer Science with Artificial Intelligence</p></center>
+		</section>
+
+		<section id="skills">
+		  <h2>Skills</h2>
+
+		  <div class="skill">
+			<p>HTML</p>
+			<div class="bar"><div class="progress html"></div></div>
+		  </div>
+
+		  <div class="skill">
+			<p>CSS</p>
+			<div class="bar"><div class="progress css"></div></div>
+		  </div>
+
+		  <div class="skill">
+			<p>JavaScript</p>
+			<div class="bar"><div class="progress js"></div></div>
+		  </div>
+		</section>
+
+		<section id="projects">
+		  <h2>Projects</h2>
+
+		  <div class="project">
+			<h3>Personal Portfolio Website</h3>
+			<p>Responsive portfolio developed using HTML, CSS, and JavaScript.</p>
+		  </div>
+
+		  <div class="project">
+			<h3>Delivery route planner</h3>
+			<p>using prolog and AI.</p>
+		  </div>
+
+		  <div class="project">
+			<h3>Vehicle service booking system</h3>
+			<p>using Java.</p>
+		  </div>
+		</section>
+
+		<section id="contact">
+		  <h2>Contact Me</h2>
+
+		  <form onsubmit="return validateForm()">
+			<input type="text" id="name" placeholder="Your Name">
+			<input type="email" id="email" placeholder="Your Email">
+			<textarea id="message" placeholder="Your Message"></textarea>
+			<button type="submit">Send Message</button>
+		  </form>
+		</section>
+
+		<footer>
+		  <p>© 2025 Personal Portfolio| Sagar Chandrabalan</p>
+		</footer>
+
+		<script>
+		function validateForm() {
+		  let name = document.getElementById("name").value;
+		  let email = document.getElementById("email").value;
+		  let message = document.getElementById("message").value;
+
+		  if (name === "" || email === "" || message === "") {
+			alert("Please fill all fields");
+			return false;
+		  }
+		  alert("Message sent successfully!");
+		  return true;
+		}
+		</script>
+
+		</body>
+		</html>
